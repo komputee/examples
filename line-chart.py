@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from komputee import KomputeeFunctionRequest, KomputeeFunctionResponse, LineChart, Series, BarChart
+from komputee import Komputee, KomputeeFunctionRequest, KomputeeFunctionResponse, LineChart, Series, BarChart
 
-app = FastAPI()
+app = Komputee(FastAPI())
 
 
 @app.post("/my-function", response_model=KomputeeFunctionResponse)

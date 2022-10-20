@@ -1,8 +1,8 @@
 from fastapi import FastAPI
-from komputee import PieChart, PieChartElement, KomputeeFunctionRequest, KomputeeFunctionResponse, LineChart, Series, BarChart, Alert, Gauge, Table
+from komputee import Komputee, PieChart, PieChartElement, KomputeeFunctionRequest, KomputeeFunctionResponse, LineChart, Series, BarChart, Alert, Gauge, Table
 import numpy as np
 
-app = FastAPI()
+app = Komputee(FastAPI())
 
 
 @app.post("/my-function", response_model=KomputeeFunctionResponse)
