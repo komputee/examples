@@ -1,10 +1,10 @@
 from typing import Any
 from fastapi import FastAPI
 import pandas as pd
-from komputee import Komputee, KomputeeFunctionRequest, KomputeeFunctionResponse, PieChart, LineChart, Series, Alert, Statistic, StatisticChange, StatisticProgress, Table, BarChart, Gauge
+from komputee import KomputeeFunctionRequest, KomputeeFunctionResponse, PieChart, LineChart, Series, Alert, Statistic, StatisticChange, StatisticProgress, Table, BarChart, Gauge
 import numpy as np
 
-app = Komputee(FastAPI())
+app = FastAPI()
 
 
 @app.post("/my-function", response_model=KomputeeFunctionResponse)
